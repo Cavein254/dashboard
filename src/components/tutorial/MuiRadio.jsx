@@ -2,6 +2,7 @@ import {
   Box,
   FormControl,
   FormControlLabel,
+  FormHelperText,
   FormLabel,
   Radio,
   RadioGroup,
@@ -23,11 +24,13 @@ const MuiRadio = () => {
           aria-labelledby="job-experience"
           onChange={handleChange}
           row
+          error
         >
           <FormControlLabel control={<Radio />} label="0-12" value="0-12" />
           <FormControlLabel control={<Radio />} label="3-12" value="3-12" />
           <FormControlLabel control={<Radio />} label="10-12" value="10-12" />
         </RadioGroup>
+        <FormHelperText>Invalid Form selection</FormHelperText>
       </FormControl>
     </Box>
   );
