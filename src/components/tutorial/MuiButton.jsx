@@ -1,5 +1,14 @@
+import FormatBoldIcon from '@mui/icons-material/FormatBold';
+import FormatItalicIcon from '@mui/icons-material/FormatItalic';
+import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
 import SendIcon from '@mui/icons-material/Send';
-import { Button, Stack } from '@mui/material';
+import {
+  Button,
+  ButtonGroup,
+  Stack,
+  ToggleButton,
+  ToggleButtonGroup,
+} from '@mui/material';
 import React from 'react';
 
 const MuiButton = () => {
@@ -57,6 +66,32 @@ const MuiButton = () => {
         >
           <SendIcon onClick={() => alert('You clicked me')} />
         </iconButton>
+      </Stack>
+      <Stack direction="row">
+        <ButtonGroup
+          variant="outlined"
+          orientation="vertical"
+          size="large"
+          aria-label="alignment button group"
+        >
+          <Button color="warning">Left</Button>
+          <Button color="warning">Center</Button>
+          <Button color="warning">Right</Button>
+          <Button color="primary">Top</Button>
+        </ButtonGroup>
+      </Stack>
+      <Stack direction="row">
+        <ToggleButtonGroup aria-label="text Formating">
+          <ToggleButton value="bold">
+            <FormatBoldIcon />
+          </ToggleButton>
+          <ToggleButton value="italic">
+            <FormatItalicIcon />
+          </ToggleButton>
+          <ToggleButton value="underlined">
+            <FormatUnderlinedIcon />
+          </ToggleButton>
+        </ToggleButtonGroup>
       </Stack>
     </Stack>
   );
