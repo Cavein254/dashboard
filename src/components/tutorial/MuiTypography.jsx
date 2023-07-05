@@ -8,8 +8,12 @@ const MuiTypography = () => {
       <Typography variant="h2">h2 variant</Typography>
       <Typography variant="h3">h3 variant</Typography>
       <Typography variant="h4">h4 variant</Typography>
-      <Typography variant="h5">h5 variant</Typography>
-      <Typography variant="h6">h6 variant</Typography>
+      <Typography variant="h5" gutterBottom>
+        h5 variant
+      </Typography>
+      <Typography variant="h6" component="h1">
+        h6 variant
+      </Typography>
 
       <Typography variant="subtittle1">sub title one</Typography>
       <Typography variant="subtittle2">sub title two</Typography>
