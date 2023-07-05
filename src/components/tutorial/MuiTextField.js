@@ -31,7 +31,8 @@ const MuiTextField = () => {
         />
         <TextField
           label="Weight"
-          InputProps={{
+          In
+          putProps={{
             endAdornment: <InputAdornment position="end">Kgs</InputAdornment>,
           }}
         />
