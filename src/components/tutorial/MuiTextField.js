@@ -4,7 +4,9 @@ const MuiTextField = () => {
   return (
     <Stack spacing={4}>
       <Stack direction="row" spacing={10}>
-        <TextField label="username" />
+        <TextField label="username" variant="outlined" />
+        <TextField label="username" variant="filled" />
+        <TextField label="username" variant="standard" />
       </Stack>
     </Stack>
   );
