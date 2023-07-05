@@ -9,9 +9,14 @@ import {
   ToggleButton,
   ToggleButtonGroup,
 } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 
 const MuiButton = () => {
+  const [formats, setFormats] = useState([]);
+  const formatChange = (e, updatedFormats) => {
+    e.preventDefault();
+    console.log(updatedFormats);
+  };
   return (
     <Stack spacing={8}>
       <Stack spacing={4} direction="row">
@@ -81,7 +86,11 @@ const MuiButton = () => {
         </ButtonGroup>
       </Stack>
       <Stack direction="row">
-        <ToggleButtonGroup aria-label="text Formating">
+        <ToggleButtonGroup
+          aria-label="text Formating"
+          value={formats}
+          onChange={formatChange}
+        >
           <ToggleButton value="bold">
             <FormatBoldIcon />
           </ToggleButton>
