@@ -45,6 +45,19 @@ const MuiButton = () => {
           Small
         </Button>
       </Stack>
+      <Stack>
+        <iconButton aria-label="send" color="success" size="large">
+          <SendIcon />
+        </iconButton>
+        <iconButton
+          aria-label="send"
+          color="success"
+          size="large"
+          disableElevation
+        >
+          <SendIcon onClick={() => alert('You clicked me')} />
+        </iconButton>
+      </Stack>
     </Stack>
   );
 };
