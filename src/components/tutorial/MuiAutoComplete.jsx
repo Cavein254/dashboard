@@ -2,9 +2,14 @@ import { AutoComplete, Stack, TextField } from '@mui/material';
 import React, { useState } from 'react';
 
 const skills = ['HTML', 'CSS', 'javascript', 'typescript', 'react'];
+const skillsOptions = skills.map((skill, index) => ({
+  id: index,
+  label: skill,
+}));
 
 const MuiAutoComplete = () => {
   const [value, setValue] = useState(null);
+  const [skill, setSkill] = useState(null);
   return (
     <Stack spacing={4} width="250px">
       <AutoComplete
@@ -13,6 +18,12 @@ const MuiAutoComplete = () => {
         value={value}
         onChange={(e, newValue) => setValue(newValue)}
         freeSolo
+      />
+      <AutoComplete
+        options={skillsOptions}
+        renderInput={(params) => <TextField {...params} label="skills" />}
+        skill={skill}
+        onChange={(e, newValue) => setSkill(newValue)}
       />
     </Stack>
   );
