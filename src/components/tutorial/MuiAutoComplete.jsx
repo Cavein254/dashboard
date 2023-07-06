@@ -12,6 +12,7 @@ const MuiAutoComplete = () => {
         renderInput={(params) => <TextField {...params} label="skills" />}
         value={value}
         onChange={(e, newValue) => setValue(newValue)}
+        freeSolo
       />
     </Stack>
   );
