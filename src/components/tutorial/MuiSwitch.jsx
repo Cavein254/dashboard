@@ -11,6 +11,10 @@ const MuiSwitch = () => {
       <FormControlLabel
         label="Dark Mode"
         control={<Switch checked={checked} onChange={handleChange} />}
+        helpText="Add dark mode"
+        color="success"
+        size="Large"
+        error
       />
     </Box>
   );
