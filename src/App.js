@@ -1,4 +1,5 @@
 import React from 'react';
+import MuiAutoComplete from './components/tutorial/MuiAutoComplete';
 // import MuiSwitch from './components/tutorial/MuiSwitch';
 // import MuiRadio from './components/tutorial/MuiRadio';
 // import MuiCheckBox from './components/tutorial/MuiCheckBox';
@@ -17,6 +18,7 @@ function App() {
       {/* <MuiRadio /> */}
       {/* <MuiCheckBox /> */}
       {/* <MuiSwitch /> */}
+      <MuiAutoComplete />
     </>
   );
 }
