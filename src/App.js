@@ -1,5 +1,5 @@
 import React from 'react';
-import MuiBox from './components/tutorial/MuiBox';
+// import MuiBox from './components/tutorial/MuiBox';
 // import MuiAutoComplete from './components/tutorial/MuiAutoComplete';
 // import MuiSwitch from './components/tutorial/MuiSwitch';
 // import MuiRadio from './components/tutorial/MuiRadio';
@@ -8,6 +8,7 @@ import MuiBox from './components/tutorial/MuiBox';
 // import MuiSelection from './components/tutorial/MuiSelection';
 // import MuiTypography from './components/tutorial/MuiTypography';
 // import MuiButton from './components/tutorial/MuiButton';
+import MuiStack from './components/tutorial/MuiStack';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       {/* <MuiCheckBox /> */}
       {/* <MuiSwitch /> */}
       {/* <MuiAutoComplete /> */}
-      <MuiBox />
+      {/* <MuiBox /> */}
+      <MuiStack />
     </>
   );
 }
