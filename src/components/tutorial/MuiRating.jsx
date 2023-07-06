@@ -1,3 +1,5 @@
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { Rating, Stack } from '@mui/material';
 import React, { useState } from 'react';
 
@@ -13,6 +15,8 @@ const MuiRating = () => {
         onChange={handleChange}
         precision={0.5}
         size="large"
+        icon={<FavoriteIcon fontSize="large" />}
+        emptyIcon={<FavoriteBorderIcon fontSize="large" />}
       />
     </Stack>
   );
