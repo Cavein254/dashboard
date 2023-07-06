@@ -1,6 +1,7 @@
 import React from 'react';
+// import MuiSwitch from './components/tutorial/MuiSwitch';
 // import MuiRadio from './components/tutorial/MuiRadio';
-import MuiCheckBox from './components/tutorial/MuiCheckBox';
+// import MuiCheckBox from './components/tutorial/MuiCheckBox';
 // import MuiTextField from './components/tutorial/MuiTextField';
 // import MuiSelection from './components/tutorial/MuiSelection';
 // import MuiTypography from './components/tutorial/MuiTypography';
@@ -14,7 +15,8 @@ function App() {
       {/* <MuiTextField /> */}
       {/* <MuiSelection /> */}
       {/* <MuiRadio /> */}
-      <MuiCheckBox />
+      {/* <MuiCheckBox /> */}
+      {/* <MuiSwitch /> */}
     </>
   );
 }
