@@ -8,7 +8,12 @@ const MuiRating = () => {
   };
   return (
     <Stack spacing={4}>
-      <Rating value={value} onChange={handleChange} />
+      <Rating
+        value={value}
+        onChange={handleChange}
+        precision={0.5}
+        size="large"
+      />
     </Stack>
   );
 };
