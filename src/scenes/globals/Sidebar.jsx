@@ -63,6 +63,10 @@ const Sidebar = () => {
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
+            style={{
+              margin: '10px 0 20px 0 ',
+              color: colors.grey[100],
+            }}
           >
             {!isCollapsed && (
               <Box
@@ -181,13 +185,6 @@ const Sidebar = () => {
               title="BarChart"
               to="/bar"
               icon={<BarChartOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="PieChart"
-              to="/pie"
-              icon={<PieChartOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
