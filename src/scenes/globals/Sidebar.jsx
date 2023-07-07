@@ -1,6 +1,6 @@
 import { Box, IconButton, Typography, useTheme } from '@mui/material';
 import React, { useState } from 'react';
-import { Menu, MenuItem } from 'react-pro-sidebar';
+import { Menu, MenuItem, ProSidebar } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 // import { Link } from 'react-router-dom';
 import { tokens } from '../../theme';
@@ -41,49 +41,54 @@ const Sidebar = () => {
         },
       }}
     >
-      <Menu>
-        <MenuItem>
+      <ProSidebar>
+        <Menu>
+          <MenuItem>
+            {!isCollapsed && (
+              <Box
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
+                ml="15px"
+              >
+                <Typography variant="h3" color={colors.grey[100]}>
+                  Admin
+                </Typography>
+                <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
+                  <MenuOutlinedIcon />
+                </IconButton>
+              </Box>
+            )}
+          </MenuItem>
+
           {!isCollapsed && (
-            <Box
-              display="flex"
-              justifyContent="space-between"
-              alignItems="center"
-              ml="15px"
-            >
-              <Typography variant="h3" color={colors.grey[100]}>
-                Admin
-              </Typography>
-              <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                <MenuOutlinedIcon />
-              </IconButton>
+            <Box mb="25px">
+              <Box display="flex" justifyContent="center" alignItems="center">
+                <img
+                  alt="profile user"
+                  width="100px"
+                  height="100px"
+                  src={`../../assets/user.png`}
+                  style={{ cursor: 'pointer', borderRadius: '50%' }}
+                />
+              </Box>
+              <Box textAlign="center">
+                <Typography
+                  variant="h2"
+                  color={colors.grey[100]}
+                  fontWeight="bold"
+                  sx={{ m: '10px 0 0 0' }}
+                >
+                  Another Admin
+                </Typography>
+                <Typography variant="h5" color={colors.greenAccent[500]}>
+                  Super Man
+                </Typography>
+              </Box>
             </Box>
           )}
-        </MenuItem>
-
-        {!isCollapsed && (
-          <Box mb="25px">
-            <Box display="flex" justifyContent="center" alignItems="center">
-              <img
-                alt="profile user"
-                width="100px"
-                height="100px"
-                src={`../../assets/user.png`}
-                style={{ cursor: 'pointer', borderRadius: '50%' }}
-              />
-            </Box>
-            <Box textAlign="center">
-              <Typography
-                variant="h2"
-                color={colors.grey[100]}
-                fontWeight="bold"
-              >
-                Another Admin
-              </Typography>
-              <Typography>Super Man</Typography>
-            </Box>
-          </Box>
-        )}
-      </Menu>
+        </Menu>
+      </ProSidebar>
     </Box>
   );
 };

@@ -29,7 +29,6 @@ const userTask = [];
 const TutsTwo = () => {
   const [inVal, setInval] = useState({ content: '' });
   const [state, dispatch] = useReducer(taskReducer, userTask);
-  console.log({ state });
   const handleChange = (e) => {
     setInval({ ...inVal, content: e.target.value });
   };
