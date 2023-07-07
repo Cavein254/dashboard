@@ -1,46 +1,57 @@
 import { Box, Button, Stack, Typography } from '@mui/material';
-import React, { useReducer } from 'react';
-
+import { useReducer } from 'react';
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'INC':
-      return { count: state.count + 1 };
-    case 'DEC':
-      return { count: state.count - 1 };
+    case 'ADD':
+      console.log(state.counter);
+      return { counter: state.counter + 1 };
+    case 'MINUS':
+      return { counter: state.counter - 1 };
     default:
-      return { count: state.count };
+      return state;
   }
 };
-
 const Tuts = () => {
-  const [state, dispatch] = useReducer(reducer, { count: 0 });
-  const increase = () => {
-    return dispatch({ type: 'INC' });
+  const [state, dispatch] = useReducer(reducer, { counter: 0 });
+  const add = (e) => {
+    dispatch({ type: 'ADD' });
   };
-  const decrease = () => {
-    return dispatch({ type: 'DEC' });
+  const minus = (e) => {
+    dispatch({ type: 'MINUS' });
   };
   return (
     <Box
-      height="100px"
-      width="full"
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      flexDirection="column"
+      height="250px"
+      p={4}
+      xs={{
+        backgroundColor: 'black',
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
     >
-      <Stack gap={2} width="140px">
-        <Button variant="contained" color="primary" onClick={increase}>
-          INCREMENT
-        </Button>
-        <Button variant="contained" color="secondary" onClick={decrease}>
-          DECREMENT
-        </Button>
-      </Stack>
-      <Stack>
-        <Typography variant="h1" color="secondary">
-          Counter : {state.count}
-        </Typography>
+      <Stack
+        width="250px"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        flexDirection="column"
+        gap={2}
+      >
+        <Stack display="flex" flexDirection="row">
+          <Button variant="contained" color="secondary" onClick={add}>
+            Add{' '}
+          </Button>
+          <Button variant="outlined" color="secondary" onClick={minus}>
+            Subtract{' '}
+          </Button>
+        </Stack>
+        <Stack>
+          <Typography variant="h1" color="secondary">
+            Counter : {state.counter}
+          </Typography>
+        </Stack>
       </Stack>
     </Box>
   );
