@@ -6,6 +6,7 @@ import 'react-pro-sidebar/dist/css/styles.css';
 import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
+import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import ReceiptOutlinedIcon from '@mui/icons-material/ReceiptOutlined';
 import { tokens } from '../../theme';
 // import CalenderTodayOutlinedIcon from '@mui/icons-material/CalenderTodayOutlined';
@@ -135,9 +136,9 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Dashboard"
-              to="/"
-              icon={<HomeOutlinedIcon />}
+              title="Profile Form"
+              to="/form"
+              icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
