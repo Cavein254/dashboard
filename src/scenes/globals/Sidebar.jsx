@@ -4,8 +4,8 @@ import { Menu, MenuItem, ProSidebar } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 // import { Link } from 'react-router-dom';
 import { tokens } from '../../theme';
-// import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 // import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 // import ReceiptOutlinedIcon from '@mui/icons-material/ReceiptOutlined';
 // import CalenderTodayOutlinedIcon from '@mui/icons-material/CalenderTodayOutlined';
 // import HelpOutlinedIcon from '@mui/icons-material/HelpOutlined';
@@ -14,6 +14,23 @@ import { tokens } from '../../theme';
 // import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined';
 // import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+import { Link } from 'react-router-dom';
+
+const Item = ({ title, to, icon, selected, setSelected }) => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  return (
+    <MenuItem
+      active={selected === title}
+      style={{ color: colors.grey[100] }}
+      onClick={() => setSelected(title)}
+      icon={icon}
+    >
+      <Typography>{title}</Typography>
+      <Link to={to} />
+    </MenuItem>
+  );
+};
 
 const Sidebar = () => {
   const theme = useTheme();
@@ -87,6 +104,15 @@ const Sidebar = () => {
               </Box>
             </Box>
           )}
+          <Box pl={isCollapsed ? undefined : '10%'}>
+            <Item
+              title="Dashboard"
+              to="/"
+              icon={<HomeOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+          </Box>
         </Menu>
       </ProSidebar>
     </Box>
