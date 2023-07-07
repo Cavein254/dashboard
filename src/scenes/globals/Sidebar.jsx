@@ -7,15 +7,15 @@ import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
 import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
 import HelpOutlinedIcon from '@mui/icons-material/HelpOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
+import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import PieChartOutlineOutlinedIcon from '@mui/icons-material/PieChartOutlineOutlined';
 import ReceiptOutlinedIcon from '@mui/icons-material/ReceiptOutlined';
-import { tokens } from '../../theme';
-// import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined';
-// import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined';
 import { Link } from 'react-router-dom';
+import { tokens } from '../../theme';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -159,6 +159,27 @@ const Sidebar = () => {
               title="PieChart"
               to="/pie"
               icon={<PieChartOutlineOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="PieChart"
+              to="/pie"
+              icon={<PieChartOutlineOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="LineChart"
+              to="/line"
+              icon={<TimelineOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Geography"
+              to="/geo"
+              icon={<MapOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
