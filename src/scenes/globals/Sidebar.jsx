@@ -16,7 +16,6 @@ import ReceiptOutlinedIcon from '@mui/icons-material/ReceiptOutlined';
 import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined';
 import { Link } from 'react-router-dom';
 import { tokens } from '../../theme';
-
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -61,7 +60,10 @@ const Sidebar = () => {
     >
       <ProSidebar collapsed={isCollapsed}>
         <Menu iconShape="square">
-          <MenuItem onClick={() => setIsCollapsed(!isCollapsed)}>
+          <MenuItem
+            onClick={() => setIsCollapsed(!isCollapsed)}
+            icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
+          >
             {!isCollapsed && (
               <Box
                 display="flex"
