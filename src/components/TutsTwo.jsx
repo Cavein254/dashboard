@@ -9,6 +9,7 @@ import {
   ListItemText,
   Paper,
   Stack,
+  TextField,
   Toolbar,
   Typography,
 } from '@mui/material';
@@ -39,7 +40,12 @@ const TutsTwo = () => {
       </AppBar>
       <Paper sx={{ padding: '10px', margin: '32px' }} elevation={4}>
         <Box display="flex" flexDirection="row" width="full">
-          <Box width="50%"></Box>
+          <Box width="50%">
+            <Stack>
+              <TextField label="Enter Task" />
+              <Button variant="contained">Add</Button>
+            </Stack>
+          </Box>
           <Box width="50%">
             <List>
               <ListItem>
