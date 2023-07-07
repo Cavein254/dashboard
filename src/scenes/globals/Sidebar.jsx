@@ -3,16 +3,15 @@ import React, { useState } from 'react';
 import { Menu, MenuItem, ProSidebar } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 // import { Link } from 'react-router-dom';
-import CalenderTodayOutlinedIcon from '@mui/icons-material/CalenderTodayOutlined';
+import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
 import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
+import HelpOutlinedIcon from '@mui/icons-material/HelpOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
+import PieChartOutlineOutlinedIcon from '@mui/icons-material/PieChartOutlineOutlined';
 import ReceiptOutlinedIcon from '@mui/icons-material/ReceiptOutlined';
 import { tokens } from '../../theme';
-// import HelpOutlinedIcon from '@mui/icons-material/HelpOutlined';
-// import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
-// import PieChartOutlineOutlinedIcon from '@mui/icons-material/PieChartOutlineOutlined';
 // import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined';
 // import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
@@ -143,9 +142,23 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Calendar"
-              to="/calendar"
-              icon={<CalenderTodayOutlinedIcon />}
+              title="FAQ Page"
+              to="/faq"
+              icon={<HelpOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="BarChart"
+              to="/bar"
+              icon={<BarChartOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="PieChart"
+              to="/pie"
+              icon={<PieChartOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
