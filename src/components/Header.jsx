@@ -1,7 +1,16 @@
+import { Box, Typography, useTheme } from '@mui/material';
 import React from 'react';
+import { tokens } from '../theme';
 
-const Header = () => {
-  return <div>Header</div>;
+const Header = ({ title, subtitle }) => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  return (
+    <Box>
+      <Typography>{title}</Typography>
+      <Typography>{subtitle}</Typography>
+    </Box>
+  );
 };
 
 export default Header;
