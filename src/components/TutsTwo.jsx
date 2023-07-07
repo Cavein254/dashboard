@@ -37,7 +37,7 @@ const TutsTwo = () => {
           </Stack>
         </Toolbar>
       </AppBar>
-      <Paper>
+      <Paper sx={{ padding: '10px', margin: '32px' }} elevation={4}>
         <Box display="flex" flexDirection="row" width="full">
           <Box width="50%"></Box>
           <Box width="50%">
