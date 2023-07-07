@@ -13,8 +13,11 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material';
+import { useState } from 'react';
 
 const TutsTwo = () => {
+  const [task, setTask] = useState('');
+  const handleClick = (e) => {};
   return (
     <>
       <AppBar position="static">
@@ -42,8 +45,14 @@ const TutsTwo = () => {
         <Box display="flex" flexDirection="row" width="full">
           <Box width="50%">
             <Stack gap={2}>
-              <TextField label="Enter Task" />
-              <Button variant="contained">Add</Button>
+              <TextField
+                label="Enter Task"
+                value={task}
+                onChange={(e) => setTask(e.target.value)}
+              />
+              <Button variant="contained" onClick={handleClick}>
+                Add
+              </Button>
             </Stack>
           </Box>
           <Box width="50%">
