@@ -6,6 +6,7 @@ import 'react-pro-sidebar/dist/css/styles.css';
 import { tokens } from '../../theme';
 // import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
 // import ReceiptOutlinedIcon from '@mui/icons-material/ReceiptOutlined';
 // import CalenderTodayOutlinedIcon from '@mui/icons-material/CalenderTodayOutlined';
 // import HelpOutlinedIcon from '@mui/icons-material/HelpOutlined';
@@ -105,6 +106,41 @@ const Sidebar = () => {
             </Box>
           )}
           <Box pl={isCollapsed ? undefined : '10%'}>
+            <Item
+              title="Dashboard"
+              to="/"
+              icon={<HomeOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Manage Team"
+              to="/team"
+              icon={<PeopleOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Dashboard"
+              to="/"
+              icon={<HomeOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Dashboard"
+              to="/"
+              icon={<HomeOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Dashboard"
+              to="/"
+              icon={<HomeOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
             <Item
               title="Dashboard"
               to="/"
