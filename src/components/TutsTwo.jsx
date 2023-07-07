@@ -13,11 +13,33 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material';
-import { useState } from 'react';
+import { useReducer, useState } from 'react';
+
+const taskReducer = (state, action) => {
+  switch (action.type) {
+    case 'ADD_TASK':
+      return [...state, action.payload];
+    default:
+      return state;
+  }
+};
+
+const userTask = [];
 
 const TutsTwo = () => {
-  const [task, setTask] = useState('');
-  const handleClick = (e) => {};
+  const [inVal, setInval] = useState({ content: '' });
+  const [state, dispatch] = useReducer(taskReducer, userTask);
+  console.log({ state });
+  const handleChange = (e) => {
+    setInval({ ...inVal, content: e.target.value });
+  };
+  const handleClick = (newTask) => {
+    const uTask = {
+      id: Date.now(),
+      task: newTask,
+    };
+    dispatch({ type: 'ADD_TASK', payload: uTask });
+  };
   return (
     <>
       <AppBar position="static">
@@ -42,24 +64,48 @@ const TutsTwo = () => {
         </Toolbar>
       </AppBar>
       <Paper sx={{ padding: '10px', margin: '32px' }} elevation={4}>
-        <Box display="flex" flexDirection="row" width="full">
+        <Box display="flex" flexDirection="column" width="full">
           <Box width="50%">
             <Stack gap={2}>
               <TextField
                 label="Enter Task"
-                value={task}
-                onChange={(e) => setTask(e.target.value)}
+                value={inVal.content}
+                onChange={handleChange}
               />
-              <Button variant="contained" onClick={handleClick}>
+              <Button variant="contained" onClick={() => handleClick(inVal)}>
                 Add
               </Button>
             </Stack>
           </Box>
-          <Box width="50%">
-            <List>
-              <ListItem>
-                <ListItemText primary="Item one" />
-              </ListItem>
+          <Box width="80%">
+            <List
+              sx={{
+                backgroundColor: 'pink',
+                marginTop: '30px',
+                display: 'flex',
+                flexDirection: 'column',
+                borderBottom: '1px solid gray',
+                justifyContent: 'center',
+                alignItems: 'center',
+                overflowY: 'scroll',
+                height: '120px',
+              }}
+            >
+              {state.map((item, index) => {
+                return (
+                  <ListItem key={index}>
+                    <ListItemText
+                      primary={item.task.content}
+                      sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        fontSize: '3rem',
+                      }}
+                    />
+                  </ListItem>
+                );
+              })}
             </List>
           </Box>
         </Box>
