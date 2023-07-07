@@ -41,7 +41,7 @@ const TutsTwo = () => {
       <Paper sx={{ padding: '10px', margin: '32px' }} elevation={4}>
         <Box display="flex" flexDirection="row" width="full">
           <Box width="50%">
-            <Stack>
+            <Stack gap={2}>
               <TextField label="Enter Task" />
               <Button variant="contained">Add</Button>
             </Stack>
