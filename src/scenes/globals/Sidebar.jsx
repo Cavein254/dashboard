@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import { Menu, MenuItem, ProSidebar } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 // import { Link } from 'react-router-dom';
-import { tokens } from '../../theme';
-// import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
+import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
+import { tokens } from '../../theme';
 // import ReceiptOutlinedIcon from '@mui/icons-material/ReceiptOutlined';
 // import CalenderTodayOutlinedIcon from '@mui/icons-material/CalenderTodayOutlined';
 // import HelpOutlinedIcon from '@mui/icons-material/HelpOutlined';
@@ -121,9 +121,9 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Dashboard"
-              to="/"
-              icon={<HomeOutlinedIcon />}
+              title="Contact Information"
+              to="/contacts"
+              icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
