@@ -59,9 +59,9 @@ const Sidebar = () => {
         },
       }}
     >
-      <ProSidebar>
-        <Menu>
-          <MenuItem>
+      <ProSidebar collapsed={isCollapsed}>
+        <Menu iconShape="square">
+          <MenuItem onClick={() => setIsCollapsed(!isCollapsed)}>
             {!isCollapsed && (
               <Box
                 display="flex"
