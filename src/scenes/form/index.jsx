@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, TextField } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Formik } from 'formik';
 import * as yup from 'yup';
@@ -48,7 +48,22 @@ const Form = () => {
               display="grid"
               gap="30px"
               gridTemplateColumns="repeat(4, minmax(0,1fr))"
-            ></Box>
+              sx={{
+                '& > div': { gridColumn: isNonMobile ? undefined : 'span 4' },
+              }}
+            >
+              <TextField
+                fullWidth
+                variant="filled"
+                type="text"
+                label="First Name"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                values={values.firstName}
+                name="firstName"
+                error={!!touched.firstName}
+              />
+            </Box>
           </form>
         )}
       </Formik>
