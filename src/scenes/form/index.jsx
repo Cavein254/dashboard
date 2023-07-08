@@ -1,4 +1,4 @@
-import { Box, TextField } from '@mui/material';
+import { Box, Button, TextField } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Formik } from 'formik';
 import * as yup from 'yup';
@@ -130,6 +130,11 @@ const Form = () => {
                 helperText={touched.address2 && errors.address2}
                 sx={{ gridColumn: 'span 4' }}
               />
+            </Box>
+            <Box display="flex" justifyContent="end" mt="20px">
+              <Button type="submit" color="secondary" variant="contained">
+                Create User
+              </Button>
             </Box>
           </form>
         )}
