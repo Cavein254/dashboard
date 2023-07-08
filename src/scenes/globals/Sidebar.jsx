@@ -4,6 +4,7 @@ import { Menu, MenuItem, ProSidebar } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 // import { Link } from 'react-router-dom';
 import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
+import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
 import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
 import HelpOutlinedIcon from '@mui/icons-material/HelpOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
@@ -162,6 +163,13 @@ const Sidebar = () => {
               title="Profile Form"
               to="/form"
               icon={<PersonOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Calendar"
+              to="/calendar"
+              icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
