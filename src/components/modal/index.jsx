@@ -9,7 +9,7 @@ const Modal = () => {
       <Button variant="contained" size="large" onClick={() => setOpen(!open)}>
         Modal
       </Button>
-      {open && <ModalItem open={open} />}
+      {open && <ModalItem open={open} setOpen={setOpen} />}
     </Box>
   );
 };
