@@ -12,9 +12,10 @@ import { ColorModeContext, useMode } from './theme';
 import Form from './scenes/form';
 // import Line from './scenes/line';
 // import Pie from './scenes/pie';
-// import FAQ from './scenes/faqs';
+import FAQ from './scenes/faq';
 // import Geography from './scenes/geography';
 // import Calendar from './scenes/calendar';
+import Modal from './components/modal';
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -35,9 +36,10 @@ function App() {
               <Route path="/form" element={<Form />} />
               {/* <Route path="/line" element={<Line />} /> */}
               {/* <Route path="/pie" element={<Pie />} /> */}
-              {/* <Route path="/faqs" element={<FAQ />} /> */}
+              <Route path="/faq" element={<FAQ />} />
               {/* <Route path="/geo" element={<Geography />} /> */}
               {/* <Route path="/calendar" element={<Calendar />} /> */}
+              <Route path="/modal" element={<Modal />} />
             </Routes>
           </main>
         </div>
