@@ -5,7 +5,7 @@ const Modal = () => {
   return (
     <Box>
       <Button variant="contained" size="large">
-        MODAL
+        Modal
       </Button>
     </Box>
   );
