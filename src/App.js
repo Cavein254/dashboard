@@ -15,8 +15,7 @@ import Form from './scenes/form';
 import FAQ from './scenes/faq';
 // import Geography from './scenes/geography';
 // import Calendar from './scenes/calendar';
-// import Modal from './components/modal/index';
-import Test from './components/test';
+import Modal from './components/modal/index';
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -40,8 +39,7 @@ function App() {
               <Route path="/faq" element={<FAQ />} />
               {/* <Route path="/geo" element={<Geography />} /> */}
               {/* <Route path="/calendar" element={<Calendar />} /> */}
-              {/* <Route path="/modal" element={<Modal />} /> */}
-              <Route path="/test" element={<Test />} />
+              <Route path="/modal" element={<Modal />} />
             </Routes>
           </main>
         </div>
